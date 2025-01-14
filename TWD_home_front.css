@@ -1,5 +1,45 @@
-body{
-    background-color: green;
+body {
+    background-color: black;
+}
+
+.fundo {
+    position: relative;
+    width: 78vw;
+    height: 100vh;
+    margin-left: 22%;
+    margin-top: 38px;
+    background-image: url('img/TWDbackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-position: center;
+    animation: moverfundo 5s ease-in-out,  3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.retanguloleft {
+    width: 380px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+@keyframes moverfundo  {
+    0% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center -12%;
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .retangulo {
