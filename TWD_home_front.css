@@ -4,9 +4,9 @@ body {
 
 .fundo {
     position: relative;
-    width: 78vw;
+    width: 80vw;
     height: 100vh;
-    margin-left: 22%;
+    margin-left: 20%;
     margin-top: 38px;
     background-image: url('img/TWDbackground.jpg');
     background-size: cover;
@@ -20,11 +20,11 @@ body {
 .retanguloleft {
     width: 380px;
     height: 100%;
-    background-color: black;
+    background-color: rgb(15, 15, 15);
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 @keyframes moverfundo  {
@@ -81,7 +81,8 @@ body {
 
 #imgfundo {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 100%;
     z-index: 1; 
     left: 20px;
     margin-top: 40px;
@@ -94,13 +95,6 @@ body {
     position: absolute;
 }
 
-.caixa {
-    width: 200px;
-    height: 50px;
-    border: 5px solid white;
-    margin: 20px;
-}
-
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -111,5 +105,65 @@ button {
     width: 200px;
     height: 50px;
     background-color: transparent;
-    border-color: transparent;
+    border-radius: 5px;
+    border-width: 4px;
+    border-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+.prototipo1 {
+    width: 380px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    margin-top: 85px;
+    z-index: 3;
+    animation: entradaesquerda 2s ease-in-out;
+}
+
+.prototipo2 {
+    width: 380px;
+    height: 150px;
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    left: 0;
+    margin-top: 235px;
+    z-index: 3;
+    animation: entradaesquerda 2.5s ease-in-out;
+}
+
+.prototipo3 {
+    width: 380px;
+    height: 150px;
+    background-color: rgb(177, 176, 176);
+    position: absolute;
+    left: 0;
+    margin-top: 385px;
+    z-index: 3;
+    animation: entradaesquerda 3s ease-in-out;
+}
+
+.prototipo4 {
+    width: 380px;
+    height: 150px;
+    background-color: rgb(104, 104, 104);
+    position: absolute;
+    left: 0;
+    margin-top: 535px;
+    z-index: 3;
+    animation: entradaesquerda 3.5s ease-in-out;
+}
+
+@keyframes entradaesquerda {
+    0% {
+        transform: translateX(-380px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
